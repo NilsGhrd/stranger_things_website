@@ -1,0 +1,30 @@
+main {
+  width: 60%;
+  margin: auto;
+}
+
+a, p {
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover p{
+  color: #AC0107
+}
+
+main > article {
+  margin-bottom: 10vh;
+}
+
+main > h1 {
+  font-size: 300%;
+  color: #AC0107;
+  text-align: center;
+  margin-top: 8vh;
+}
+
+main > article > section > h2 {
+  font-size: 180%;
+  margin-top: 8vh;
+}

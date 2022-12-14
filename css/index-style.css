@@ -1,0 +1,164 @@
+header > figure {
+  background-image: url("../img/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 92vh;
+  width: 100%;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 93%);
+  top: -1px;
+}
+
+header > figure > button {
+  font-size: 170%;
+  color: #ffffff;
+  background-color: Transparent;
+  border-radius: 15px;
+  padding: 2px 24px;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: ease .5s;
+  border: 2px #ffffff solid;
+  animation-name: headerButton;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+}
+
+header > figure > button:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+  border: none;
+  background-color: #02020A;
+  color: #AC0107;
+  cursor: pointer;
+}
+
+main {
+  width: 60%;
+  margin: auto;
+}
+
+main > article > section {
+  margin: 60px 0;
+}
+
+main > article > section > h1 {
+  font-family: 'New Tegomin', serif;
+  text-align: center;
+  font-size: 400%;
+  color: #AC0107;
+  margin-bottom: 20px;
+}
+
+
+main > article > section > figure {
+  position: relative;
+  height: 35vw;
+  width: 59vw;
+  margin: auto;
+}
+
+#cover{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/trailer-thumnail-1.jpg);
+  background-position: center;
+}
+
+#play {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  clip-path: polygon(44% 38%, 44% 62%, 59% 50%);
+}
+
+#cover:hover, #play:hover {
+  cursor: pointer;
+}
+
+
+main > article > section > figure > iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+main > article > section > figure > figcaption {
+  position: absolute;
+  top: 100%;
+}
+
+main > article > section > p {
+  margin: 14px 0;
+  font-size: 120%;
+}
+
+
+.playEvent{
+  animation-name: playButton;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.playEventBg{
+  animation-name: playButtonBg;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes headerButton {
+  0%{transform: translate(-50%, -10px);}
+  50%{transform: translate(-50%, 10px);}
+  100%{transform: translate(-50%, -10px);}
+}
+
+@keyframes playButton{
+  0%{transform: scale(1);}
+  10%{transform: rotateZ(360deg);}
+  60%{transform: rotateZ(0deg);}
+  70%{transform: translateX(0);}
+  99%{z-index: 0;}
+  100%{z-index: -10; transform: translateX(20vw);}
+}
+
+@keyframes playButtonBg {
+  99%{z-index: 0;}
+  80%{opacity: 1}
+  100%{z-index: -10; opacity: 0}
+}
+
+@media only screen and (max-width: 1200px) {
+  main {
+    width: 80%;
+    margin: auto;
+  }
+
+  main > article > section > figure {
+    position: relative;
+    height: 45vw;
+    width: 100%;
+    margin: auto;
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+  main {
+    width: 90%;
+    margin: auto;
+  }
+
+  main > article > section > figure {
+    position: relative;
+    height: 48vw;
+    width: 100%;
+    margin: auto;
+  }
+
+}

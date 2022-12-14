@@ -1,0 +1,241 @@
+body{
+  background-color: #f1f1f1
+}
+
+.priceBanner {
+  width: 100%;
+  height: 7vh;
+  background-color: #AC0107;
+  position: relative;
+  font-weight: 700;
+}
+
+#checkoutButton {
+  color: #ffffff;
+  float: right;
+  height: 100%;
+  border: none;
+  padding: 0 3vw;
+  background-color: #840005;
+  transition: all .5s;
+  font-weight: 700;
+}
+
+#checkoutButton:hover{
+  background-color: #c12c31
+}
+
+#amount, #price {
+  color: #ffffff;
+  float: right;
+  padding: 2vh 1vw;
+}
+
+
+nav {
+  box-shadow: none;
+}
+
+main{
+  width: 80%;
+  margin: auto;
+}
+
+main > article {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 4vw;
+  row-gap: 4vw;
+  margin: 15vh 0;
+}
+
+main > article > section {
+  position: relative;
+  height: 35vh;
+}
+
+main > article > section:hover .info{
+  top: 0;
+  border-radius: 10px 10px 0 0;
+}
+
+main > article > section:hover .image {
+  height: 100%;
+  border-radius: 0 0 10px 10px;
+}
+
+main > article > section:hover .addButton{
+  border-radius: 0 10px 0 0;
+}
+
+main > article > section:hover .description {
+  height: 80%;
+  top: 20%;
+  background-color: #000;
+  opacity: 0.8;
+  width: 100%;
+  position:absolute;
+}
+
+main > article > section > figure {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  float: left;
+  transition: all .5s;
+}
+
+main > article > section > figure > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.info {
+  width: 100%;
+  height: 20%;
+  top: 80%;
+  position: absolute;
+  background-color: #AC0107;
+  transition: all .5s;
+  border-radius: 0 0 10px 10px;
+}
+
+
+.description{
+  opacity: 0;
+  transition: all .5s;
+  height: 0;
+}
+
+.description > p {
+  color: #ffffff;
+  width: 70%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+
+
+main > article > section > div > h2 {
+  position: absolute;
+  color: #ffffff;
+  float: left;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 4%;
+}
+
+main > article > section > div > button {
+  float: right;
+  height: 100%;
+  width: 25%;
+  border: none;
+  background-color: #840005;
+  color: #ffffff;
+  font-size: 100%;
+  border-radius: 0 0 10px 0;
+  transition: all .5s;
+  font-weight: 700;
+}
+
+main > article > section > div > button:hover{
+  background-color: #c12c31
+}
+
+main > section {
+  width: 70%;
+  margin: auto;
+}
+
+main > section > form {
+  position: relative;
+  margin-bottom: 5vh;
+}
+
+main > section > h2 {
+  text-align: center;
+  color: #AC0107;
+}
+
+main > section > form > label {
+  display: block;
+}
+
+main > section > form > input {
+  font-size: 150%;
+  width: 100%;
+  margin-bottom: 3vh;
+}
+
+#total {
+  font-size: 250%;
+  text-align: center;
+  color: #AC0107;
+}
+
+#order {
+  border: none;
+  padding: 15px 0;
+  background-color: #000;
+  color: #ffffff;
+  transition: all .5s;
+}
+
+#order:hover{
+  background-color: #AC0107
+}
+
+.form-left{
+  width: 70%;
+}
+
+.form-right{
+  width: 20%;
+  right: -6px;
+  position: absolute;
+}
+
+
+@media only screen and (max-width: 1400px) {
+  main {
+    width: 70%;
+  }
+
+  main > article > section > div > h2{
+    font-size: 100%
+  }
+
+  main > article {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  main > article > section {
+    height: 50vh;
+  }
+
+  .addButton{
+    font-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #checkout {
+    width: 100%
+  }
+
+
+}
+
+@media only screen and (max-width: 800px){
+  main > article {
+    grid-template-columns: 1fr;
+  }
+
+  main > article > section {
+    height: 50vh;
+  }
+}
